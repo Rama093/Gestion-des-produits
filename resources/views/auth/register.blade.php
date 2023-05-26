@@ -19,9 +19,9 @@
     <div class="card o-hidden border-0 shadow-lg my-5">
       <div class="card-body p-0">
         <!-- Nested Row within Card Body -->
-        <div class="row">
-          <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-          <div class="col-lg-7">
+       
+          
+          <div class="card-body p-1">
             <div class="p-5">
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Créer un compte!</h1>
@@ -29,26 +29,26 @@
               <form action="{{ route('register.save') }}" method="POST" class="user">
                 @csrf
                 <div class="form-group">
-                  <input name="name" type="text" class="form-control form-control-user @error('name')is-invalid @enderror" id="exampleInputName" placeholder="Name">
+                  <input name="name" type="text" class="form-control form-control-user @error('name')is-invalid @enderror" id="exampleInputName" placeholder="Nom">
                   @error('name')
                     <span class="invalid-feedback">{{ $message }}</span>
                   @enderror
                 </div>
                 <div class="form-group">
-                  <input name="email" type="email" class="form-control form-control-user @error('email')is-invalid @enderror" id="exampleInputEmail" placeholder="Email Address">
+                  <input name="email" type="email" class="form-control form-control-user @error('email')is-invalid @enderror" id="exampleInputEmail" placeholder="Adresse Email">
                   @error('email')
                     <span class="invalid-feedback">{{ $message }}</span>
                   @enderror
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input name="password" type="password" class="form-control form-control-user @error('password')is-invalid @enderror" id="exampleInputPassword" placeholder="Password">
+                    <input name="password" type="password" class="form-control form-control-user @error('password')is-invalid @enderror" id="exampleInputPassword" placeholder="Mot de Passe">
                     @error('password')
                       <span class="invalid-feedback">{{ $message }}</span>
                     @enderror
                   </div>
                   <div class="col-sm-6">
-                    <input name="password_confirmation" type="password" class="form-control form-control-user @error('password_confirmation')is-invalid @enderror" id="exampleRepeatPassword" placeholder="Repeat Password">
+                    <input name="password_confirmation" type="password" class="form-control form-control-user @error('password_confirmation')is-invalid @enderror" id="exampleRepeatPassword" placeholder="Confirmer mot de passe">
                     @error('password_confirmation')
                       <span class="invalid-feedback">{{ $message }}</span>
                     @enderror
@@ -61,7 +61,7 @@
                 <a class="small" href="{{ route('login') }}">Vous avez déjà un compte? Connectez-vous!</a>
               </div>
             </div>
-          </div>
+        
         </div>
       </div>
     </div>
